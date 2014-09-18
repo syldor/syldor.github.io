@@ -15,7 +15,8 @@ On this image, we can see the main roads in red with a thin black border around.
 ###  Display a simple map
 
 Let's now create a map with leaflet, say of the Laos. Everything is well explained [here](http://leafletjs.com/examples/quick-start.html).
-Do not forget to set a width for your map in your CSS ! Here the JS: </p>
+Do not forget to set a width for your map in your CSS ! Here the JS:
+
 ```javascript
 var naked_map = L.map('naked_map').setView([18.35, 104.7], 6); 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(naked_map);
@@ -26,6 +27,7 @@ The HTML:
 <div id="naked_map" > </div>
 ```
 And the CSS: 
+
 ```css
 #naked_map = {
 height: 500px;
@@ -41,31 +43,33 @@ be more convenient, I filtered it just to keep the main roads and converted it t
 [QGIS](http://www.qgis.org/en/site/) ([file here](laos_roads.json) or in the source code).
 Let's add the new roads layer. An easy way to do it, is to open the .json file and add "var laos_roads = " before the json object inside. 
 
-<pre>`
+```
 var laos_roads = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
 "features": [
 { "type": "Feature", ...........
-`</pre> 
+```
 
 Then, include the .json file in the head of your index.html. The CSS and HTML are the same as before, except the id is now "roads_map".
-</p>
-        <pre>`
+
+```javascript
 var roads_map = L.map('roads_map').setView([18.35, 104.7], 6);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(roads_map);
 
 var style = {
-color: 'yellow',
-weight: 2.5,
-opacity: 1
+	color: 'yellow',
+	weight: 2.5,
+	opacity: 1
 };
 
 var roads_layer = L.geoJson(laos_roads, {style: style}).addTo(roads_map);
-`</pre> 
-<div id="roads_map"></div>
+```javascript
 
+```
+<div id="roads_map"></div>
+``
 ###  Style the roads
 
 And now is the big trick, as it is not possible to style the inside and the outside of a road, let's first display roads with the color of the border we want, red, with a given width of 3, and then display again the same data but with the color of the inside, yellow, and a smaller width.
