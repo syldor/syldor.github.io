@@ -1,7 +1,9 @@
 ---
 layout: post
-title: You're up and running!
+title: Make beautiful roads with Leaflet
 ---
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
 ## Make beautiful roads with Leaflet
 
 Leaflet is a great library to deal with geodata on a web site or a web app. We will see here how to create
@@ -100,5 +102,11 @@ var inside_layer = L.geoJson(laos_roads, {style: style_inside}).addTo(final_map)
 <div id="final_map"></div>
 
 We now have a map that looks clean and professional.
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="roads.js"></script>
+<script src="laos_roads.json" type="text/javascript"></script>
+
+
 
 
