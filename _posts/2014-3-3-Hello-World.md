@@ -1,10 +1,14 @@
+---
+layout: post
+title: You're up and running!
+---
 ## Make beautiful roads with Leaflet
 
             Leaflet is a great library to deal with geodata on a web site or a web app. We will see here how to create
             a map with a layer of roads on it. Leaflet only allows to draw plain linestring, there is no styling function 
             to render a road as in a map like this :
 
-            ![](example.png)
+            ![](beautiful/example.png)
 
 On this image, we can see the main roads in red with a thin black border around.
 
@@ -91,7 +95,4 @@ On this image, we can see the main roads in red with a thin black border around.
 
 We now have a map that looks clean and professional.
 
-          </div>
-        </div>
-      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
+
