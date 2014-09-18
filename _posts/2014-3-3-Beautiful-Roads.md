@@ -2,7 +2,7 @@
 layout: post
 title: Make beautiful roads with Leaflet
 ---
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://syldor.github.io/_posts/Beautiful-Roads/style.css" media="screen" />
 
 ## Make beautiful roads with Leaflet
 
@@ -104,8 +104,8 @@ var inside_layer = L.geoJson(laos_roads, {style: style_inside}).addTo(final_map)
 We now have a map that looks clean and professional.
 
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="roads.js"></script>
-<script src="laos_roads.json" type="text/javascript"></script>
+<script src="http://syldor.github.io/_posts/Beautiful-Roads/roads.js"></script>
+<script src="http://syldor.github.io/_posts/Beautiful-Roads/laos_roads.json" type="text/javascript"></script>
 
 
 
