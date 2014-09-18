@@ -1,0 +1,8 @@
+.example {
+	height: 300px;
+}
+
+#naked_map, #roads_map, #final_map{
+	height: 500px;
+	width: 500px;
+}
