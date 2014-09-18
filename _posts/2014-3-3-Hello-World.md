@@ -8,7 +8,7 @@ Leaflet is a great library to deal with geodata on a web site or a web app. We w
 a map with a layer of roads on it. Leaflet only allows to draw plain linestring, there is no styling function 
 to render a road as in a map like this :
 
-![](images/example.png)
+![](http://syldor.github.io/images/example.png)
 
 On this image, we can see the main roads in red with a thin black border around.
 
@@ -23,9 +23,11 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(naked_map);
 ```
 
 The HTML:
+
 ```html
 <div id="naked_map" > </div>
 ```
+
 And the CSS: 
 
 ```css
