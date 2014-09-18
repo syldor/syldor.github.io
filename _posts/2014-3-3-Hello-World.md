@@ -12,21 +12,21 @@ On this image, we can see the main roads in red with a thin black border around.
 
             Let's now create a map with leaflet, say of the Laos. Everything is well explained [here](http://leafletjs.com/examples/quick-start.html).
             Do not forget to set a width for your map in your CSS ! Here the JS: </p>
-
+```javascript
     var naked_map = L.map('naked_map').setView([18.35, 104.7], 6); 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(naked_map);
-                `</pre> 
+```
 
                 The HTML:
-                <pre>`
+```html
     <div id="naked_map" > </div>
-                `</pre> 
+```
                 And the CSS: 
-                <pre>`
+```css
     #naked_map = {
       height: 500px;
     }
-                `</pre> 
+```
 
                 <div id="naked_map"></div>
 
