@@ -2,7 +2,7 @@
 layout: post
 title: Make beautiful roads with Leaflet
 ---
-<link rel="stylesheet" type="text/css" href="http://syldor.github.io/_posts/Beautiful-Roads/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://syldor.github.io/metadata/beautiful-roads/css/style.css" media="screen" />
 
 ## Make beautiful roads with Leaflet
 
@@ -10,7 +10,7 @@ Leaflet is a great library to deal with geodata on a web site or a web app. We w
 a map with a layer of roads on it. Leaflet only allows to draw plain linestring, there is no styling function 
 to render a road as in a map like this :
 
-![](http://syldor.github.io/images/example.png)
+![](http://syldor.github.io/metadata/beautiful-roads/img/example.png)
 
 On this image, we can see the main roads in red with a thin black border around.
 
@@ -104,8 +104,8 @@ var inside_layer = L.geoJson(laos_roads, {style: style_inside}).addTo(final_map)
 We now have a map that looks clean and professional.
 
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="http://syldor.github.io/_posts/Beautiful-Roads/roads.js"></script>
-<script src="http://syldor.github.io/_posts/Beautiful-Roads/laos_roads.json" type="text/javascript"></script>
+<script src="http://syldor.github.io/metadata/beautiful-roads/js/roads.js"></script>
+<script src="http://syldor.github.io/metadata/beautiful-roads/data/laos_roads.json" type="text/javascript"></script>
 
 
 
