@@ -27,7 +27,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(naked_map);
 The HTML:
 
 ```html
-<div id="naked_map" > </div>
+< div id="naked_map" > < /div>
 ```
 
 And the CSS: 
