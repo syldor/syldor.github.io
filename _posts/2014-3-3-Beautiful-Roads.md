@@ -19,20 +19,20 @@ On this image, we can see the main roads in red with a thin black border around.
 Let's now create a map with leaflet, say of the Laos. Everything is well explained [here](http://leafletjs.com/examples/quick-start.html).
 Do not forget to set a width for your map in your CSS ! Here the JS:
 
-```javascript
+``` javascript
 var naked_map = L.map('naked_map').setView([18.35, 104.7], 6); 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(naked_map);
 ```
 
 The HTML:
 
-```html
+``` html
 < div id="naked_map" > < /div>
 ```
 
 And the CSS: 
 
-```css
+``` css
 #naked_map = {
 height: 500px;
 }
@@ -58,7 +58,7 @@ var laos_roads = {
 
 Then, include the .json file in the head of your index.html. The CSS and HTML are the same as before, except the id is now "roads_map".
 
-```javascript
+``` javascript
 var roads_map = L.map('roads_map').setView([18.35, 104.7], 6);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(roads_map);
 
@@ -69,16 +69,16 @@ var style = {
 };
 
 var roads_layer = L.geoJson(laos_roads, {style: style}).addTo(roads_map);
-```javascript
-
 ```
+
+
 <div id="roads_map"></div>
-``
+
 ###  Style the roads
 
 And now is the big trick, as it is not possible to style the inside and the outside of a road, let's first display roads with the color of the border we want, red, with a given width of 3, and then display again the same data but with the color of the inside, yellow, and a smaller width.
 
-<pre>`
+``` javascript
 var final_map = L.map('final_map').setView([18.35, 104.7], 6);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 attribution: '© [OpenStreetMap](http://osm.org/copyright) contributors'
@@ -98,14 +98,15 @@ opacity: 1
 
 var border_layer = L.geoJson(laos_roads, {style: style_border}).addTo(final_map);
 var inside_layer = L.geoJson(laos_roads, {style: style_inside}).addTo(final_map);
+```
 
 <div id="final_map"></div>
 
 We now have a map that looks clean and professional.
 
+<script src="http://syldor.github.io/metadata/beautiful-roads/data/laos_roads.json" type="text/javascript"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script src="http://syldor.github.io/metadata/beautiful-roads/js/roads.js"></script>
-<script src="http://syldor.github.io/metadata/beautiful-roads/data/laos_roads.json" type="text/javascript"></script>
 
 
 
